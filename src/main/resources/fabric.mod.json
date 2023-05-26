@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "actually-camel",
+  "version": "${version}",
+  "name": "actually-camel",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/blackfur/actually-camel"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "mixins": [
+    "actually-camel.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "1.20-beta.6"
+  }
+}

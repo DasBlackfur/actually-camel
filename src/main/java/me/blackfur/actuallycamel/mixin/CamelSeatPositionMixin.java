@@ -7,8 +7,8 @@ import org.spongepowered.asm.mixin.injection.ModifyArg;
 
 @Mixin(CamelEntity.class)
 public class CamelSeatPositionMixin {
-    @ModifyArg(method = "getPassengerAttachmentPos",  at = @At(value = "INVOKE", target = "Lorg/joml/Vector3f;<init>(FFF)V"), index = 2)
-    public float redirect_camelSeatPosition(float z) {
+    @ModifyArg(method = "getPassengerAttachmentPos",  at = @At(value = "INVOKE", target = "Lnet/minecraft/util/math/Vec3d;<init>(DDD)V"), index = 2)
+    public double redirect_camelSeatPosition(double z) {
         if (z == 0.5F) {
             return 0.7F;
         } else if (z <= -0.6F) {
